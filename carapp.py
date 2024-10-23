@@ -4,9 +4,22 @@ import pandas as pd
 
 
 # Load the model, scaler, and encoder
-rf_model = joblib.load(r'.\models\rf_model.pkl')
-scaler = joblib.load(r'.\scaler.pkl')
-encoder = joblib.load(r'.\encoder.pkl')
+import os
+model_path = os.path.join(os.path.dirname(__file__), 'models', 'rf_model.pkl')
+
+rf_model = joblib.load(model_path)
+
+
+import os
+model_path = os.path.join(os.path.dirname(__file__), 'models', 'scaler.pkl')
+
+rf_model = joblib.load(model_path)
+
+
+import os
+model_path = os.path.join(os.path.dirname(__file__), 'models', 'encoder.pkl')
+
+rf_model = joblib.load(model_path)
 
 # User interface
 st.title("Car Price Prediction")
