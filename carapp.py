@@ -2,7 +2,7 @@ import streamlit as st
 import joblib
 import pandas as pd
 import pickle
-
+import os
 
 # Load the model, scaler, and encoder
 import logging
