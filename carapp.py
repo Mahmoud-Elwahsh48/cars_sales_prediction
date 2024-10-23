@@ -9,7 +9,7 @@ import os
 model_path = os.path.join(os.path.dirname(__file__), 'models', 'rf_model.pkl')
 
 with open(model_path, 'wb') as f:
-    pickle.dump(rf_model, f)
+    pickle.dump(model_path, f)
 
 
 
