@@ -5,11 +5,23 @@ import pickle
 
 
 # Load the model, scaler, and encoder
+import streamlit as st
+import joblib
 import os
-model_path = os.path.join(os.path.dirname(__file__), 'models', 'rf_model.pkl')
 
-with open(model_path, 'wb') as f:
-    pickle.dump(model_path, f)
+model_path = './models/rf_model.pkl'
+
+st.title("Model Loader")
+
+if os.path.exists(model_path):
+    try:
+        rf_model = joblib.load(model_path)
+        st.success("Model loaded successfully!")
+    except Exception as e:
+        st.error(f"Error loading model: {e}")
+else:
+    st.error(f"Model file not found at: {model_path}")
+
 
 
 
