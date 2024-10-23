@@ -4,9 +4,9 @@ import pandas as pd
 
 
 # Load the model, scaler, and encoder
-rf_model = joblib.load(r'..\models\rf_model.pkl')
-scaler = joblib.load(r'..\scaler.pkl')
-encoder = joblib.load(r'..\encoder.pkl')
+rf_model = joblib.load(r'.\models\rf_model.pkl')
+scaler = joblib.load(r'.\scaler.pkl')
+encoder = joblib.load(r'.\encoder.pkl')
 
 # User interface
 st.title("Car Price Prediction")
