@@ -1,13 +1,16 @@
 import streamlit as st
 import joblib
 import pandas as pd
+import pickle
 
 
 # Load the model, scaler, and encoder
 import os
 model_path = os.path.join(os.path.dirname(__file__), 'models', 'rf_model.pkl')
 
-rf_model = joblib.load(model_path)
+with open(model_path, 'wb') as f:
+    pickle.dump(rf_model, f)
+
 
 
 import os
